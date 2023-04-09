@@ -4,6 +4,7 @@ describe('Newsletter', () => {
   beforeEach(() => {
     cy.task('seedDatabase');
   });
+
   it('should subscribe to newsletter', () => {
     // intercept http request and return dummy data
     cy.intercept('POST', '/newsletter*', { status: 201 });
